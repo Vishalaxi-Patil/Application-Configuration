@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://xmlns.jcp.org/xml/ns/javaee" xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_4_0.xsd" id="WebApp_ID" version="4.0">
+  <display-name>it-compaies</display-name>
+  <welcome-file-list>
+    <welcome-file>index.html</welcome-file>
+  </welcome-file-list>
+  <servlet>
+  <servlet-name>beansweb</servlet-name>
+  <servlet-class>com.xworkz.it.web.BeansWeb</servlet-class>
+  <load-on-startup>1</load-on-startup>
+  </servlet>
+   <servlet>
+  <servlet-name>capsicumWeb</servlet-name>
+  <servlet-class>com.xworkz.it.web.CapsicumWeb</servlet-class>
+  <load-on-startup>2</load-on-startup>
+  </servlet>
+<servlet-mapping>
+<servlet-name>beansweb</servlet-name>
+<url-pattern>/beansAction</url-pattern>
+</servlet-mapping>
+<servlet-mapping>
+<servlet-name>capsicumWeb</servlet-name>
+<url-pattern>/capsicumAction</url-pattern>
+</servlet-mapping>
+  <servlet>
+ <servlet-name>mashroomServlet</servlet-name>
+  <servlet-class>com.xworkz.it.web.MashroomServlet</servlet-class>
+  <load-on-startup>3</load-on-startup>
+  </servlet>
+  
+  <servlet>
+  <servlet-name>lifeCycleServlet</servlet-name>
+  <servlet-class>com.xworkz.it.web.LifeCycleServlet</servlet-class>
+  <load-on-startup>4</load-on-startup>
+  </servlet>
+  <servlet-mapping>
+  <servlet-name>lifeCycleServlet</servlet-name>
+  <url-pattern>/lifeCycleServlet</url-pattern>
+  </servlet-mapping>
+  
+</web-app>
